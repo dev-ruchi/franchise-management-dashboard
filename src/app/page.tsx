@@ -4,10 +4,10 @@ import { useState } from 'react';
 import Head from 'next/head';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
-import { ChevronUp } from 'lucide-react';
+
 
 export default function Dashboard() {
-  const [selectedTab, setSelectedTab] = useState('home');
+  const [selectedTab] = useState('home');
   
   const menuItems = [
     { id: 'home', label: 'Home', active: true },
@@ -21,28 +21,7 @@ export default function Dashboard() {
     { id: 'questions', label: 'Pending Questions', badge: 2 },
   ];
 
-  const franchisees = [
-    { id: 1, name: 'Wade Warren', stage: 'Initial Inquiry' },
-    { id: 2, name: 'Ana Wright', stage: 'Initial Inquiry' },
-    { id: 3, name: 'Cody Fisher', stage: 'Initial Inquiry' },
-  ];
 
-  const pendingQuestions = [
-    { 
-      id: 1,
-      name: 'Phoenix Baker', 
-      company: 'Syscorp', 
-      question: 'What are the requirements for opening a new store?',
-      time: '5min ago'
-    },
-    { 
-      id: 2, 
-      name: 'Koray Okumuz', 
-      company: 'Bestify', 
-      question: 'How do I manage inventory effectively?',
-      time: '4hr ago'
-    }
-  ];
 
   return (
     <div className="flex h-screen bg-gray-50">
